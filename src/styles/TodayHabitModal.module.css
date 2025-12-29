@@ -1,0 +1,59 @@
+.todayHabitCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.todayActionLink {
+  text-decoration: none;
+  margin-left: auto;
+  color: inherit;
+}
+
+.todayActionLink,
+.todayActionLink:visited,
+.todayActionLink:active,
+.todayActionLink:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.todayActionLink a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.todayActionLink a:hover,
+.todayActionLink a:visited,
+.todayActionLink a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.habitButtonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.habitButtonContainer button {
+  font-family: 'EF_jejudoldam', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .habitButtonContainer {
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+
+  .habitButtonContainer button {
+    width: calc(50% - 4px);
+    min-width: 0;
+    flex: 1;
+  }
+}
+

@@ -1,0 +1,143 @@
+.navbar {  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px auto 0;
+}
+
+.wrapper {
+  width: 87%; 
+  margin: 0 auto;
+  padding: 32px 24px; 
+}
+
+/* iPad Mini */
+@media (max-width: 1023px) {
+  .wrapper {
+    width: 90%
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .wrapper {
+    width: 95%;
+    padding: 20px 16px;
+  }
+}
+
+.StudyInsertionWrapper {
+  max-width: 696px;
+  min-width: 450px;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .StudyInsertionWrapper {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  text-align: left;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  min-height: 320px; 
+}
+
+/* Mobile */
+@media (max-width:767px) {
+  .container {
+    padding: 24px;
+    margin-bottom: 24px;
+    min-height: auto;
+  }
+}
+
+.msgBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.emptyMessage {
+  color: #818181;
+  font-size: 14px;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .emptyMessage {
+    font-size: 12px;
+  }
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #414141;
+}
+
+/* Mobile Screen Responsive (<= 499px) added by opuswork */
+@media (max-width: 499px) {
+  .container {
+    width: 100%;
+    padding: 24px 16px;
+    overflow-x: hidden;
+  }
+
+  .StudyInsertionWrapper {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
+  .wrapper {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  /* EditForm responsive styles */
+  .container section {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .container section > div {
+    margin-bottom: 16px;
+  }
+
+  .container section > div:last-of-type {
+    margin-bottom: 0;
+  }
+
+  /* Ensure form elements don't overflow */
+  .container section > div > div {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Thumbnail grid responsive - 2 columns on mobile instead of 4 */
+  .container :global([class*="thumbNailSelect"]) {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .container :global([class*="thumbNailSelect"]) > div {
+    height: 100px !important;
+  }
+}
+
+/* Mobile Screen Responsive (<= 499px) added by opuswork */

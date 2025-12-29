@@ -1,0 +1,17 @@
+.labelContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.labelText {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.labelChildren {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+}

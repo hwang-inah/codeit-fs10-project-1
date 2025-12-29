@@ -1,0 +1,71 @@
+.cardList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 24px;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .cardList {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.recentList {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 10px;
+}
+
+.recentList > * {
+  flex-shrink: 0;
+  width: calc((100% - 48px) / 3);
+  min-width: 240px;
+}
+
+@media (max-width: 767px) {
+  .recentList {
+    gap: 16px;
+  }
+  
+  .recentList > * {
+    width: calc(100% - 16px);
+    min-width: 100%;
+  }
+}
+
+.list {
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+}
+
+@media (max-width: 767px) {
+  .list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.inputBox {
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.buttonBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 767px) {
+  .buttonBox {
+    margin-top: 40px;
+  }
+}

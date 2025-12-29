@@ -1,0 +1,259 @@
+@font-face {
+  font-family: 'EF_jejudoldam';
+  src: url('../fonts/EF_jejudoldam.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  position: relative;
+}
+
+.introInput {
+  height: 100px;
+  font-size: 14px;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 16px;
+  color: #414141;
+  line-height: 50px;
+}
+
+.input {
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 6px 20px;
+  font-size: 14px;
+  background-color: #fff;
+  outline: none;
+}
+
+.input::placeholder {
+  font-weight: 400;
+  color: #818181;
+} 
+
+.inputLabel {
+  padding: 12px 20px;
+}
+
+.inputLabel:focus {
+  border: 1px solid red;
+}
+
+.inputSearch {
+  width: 245px;
+  padding-left: 35px;
+}
+
+.iconSearch {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+}
+
+.sortButton {
+  color: #818181;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23818181' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
+  padding-right: 35px;
+}
+
+.LoadMoreButton {
+  width: 260px;
+  padding: 17px;
+  color: #5c8352;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.LoadMoreButton:hover {
+  background-color: #5c8352;
+  color: #fff;
+} 
+
+.LoadMoreButton:active {
+  transform: scale(0.99);
+}
+
+.thumbNailSelect {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap : 16px;
+  margin: 0 auto;
+}
+
+.thumbNailSelect > div {
+  cursor: pointer;
+  border-radius: 10px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.passwordWrapper:focus-within {
+  border-color: red;
+}
+
+.passwordWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.passwordBox {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 12px 0;
+  background: transparent;
+}
+
+.passwordBox::placeholder {
+  color: #818181;
+}
+
+.eyesButton {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.selectIcon {
+  position: absolute;
+  bottom: calc(50% - 16px);
+  left: calc(50% - 16px);
+}
+
+.selectBox {
+  position: relative;
+}
+
+.button {
+  background-color: #99C08E;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #7FA872;
+}
+
+.buttonCreateForm {
+  font-family: 'EF_jejudoldam', sans-serif;
+  background-color: #99C08E;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.buttonCreateForm:hover {
+  background-color: #7FA872;
+}
+
+
+.errorMessage {
+  font-size: 14px;
+  color: red;
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+.buttonBox {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonBox .button {
+  min-width: 180px;
+}
+
+
+
+
+.errorMessage {
+  font-size: 14px;
+  color: red;
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+.buttonBox {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonBox .button {
+  min-width: 180px;
+}
+
+.buttonBoxForEditForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.buttonBoxForEditForm .button {
+  flex: 1;
+  width: 100%;
+  min-width: 140px;
+  font-family: 'EF_jejudoldam', sans-serif;
+}
+
+.buttonBoxForEditForm .button:first-child {
+  background-color: #DDDDDD;
+}
+
+.buttonBoxForEditForm .button:first-child:hover {
+  background-color: #CCCCCC;
+}
+
+.buttonBoxForEditForm .button:last-child {
+  background-color: #99C08E;
+}
+
+.buttonBoxForEditForm .button:last-child:hover {
+  background-color: #7FA872;
+}

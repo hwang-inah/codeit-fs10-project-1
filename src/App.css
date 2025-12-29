@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6f4ef;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 480px;
+}
+
+
+@media (max-width: 499px) {
+  .container {
+    min-width: 0;
+    overflow-x: hidden;
+  }
+} 

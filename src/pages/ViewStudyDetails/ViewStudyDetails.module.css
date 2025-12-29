@@ -1,0 +1,834 @@
+
+.mainContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: #ffffff;
+  width: 87%;
+  box-sizing: border-box;
+  border: 0px solid red;
+  border-radius: 12px;
+  overflow-x: hidden;
+  /* min-height: 100vh; */
+}
+
+.loadingText {
+  padding: 40px;
+  text-align: center;
+}
+
+.header {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow: visible;
+}
+
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: visible;
+}
+
+.arrowRightIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.engagementMetrics {
+  color: #ffffff;
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  position: relative;
+  flex-wrap: nowrap;
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: visible;
+}
+
+.wrapEnabled {
+  flex-wrap: wrap;
+  align-content: flex-start;
+  flex: 1 1 50%;
+  max-width: 50%;
+  min-width: 0;
+}
+
+/* Child selectors when wrap-enabled is active */
+.engagementMetrics.wrapEnabled > :global(.EmojiPickerContainer) {
+  flex-basis: auto;
+  width: auto;
+  margin-top: 0;
+  order: 999;
+}
+
+.engagementMetrics.wrapEnabled > .metric-btn {
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+/* emoji-picker styles moved to components/UI/EmojiPicker/EmojiPicker.css */
+
+.addBtn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #0000001A;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.metricBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background-color: #00000080;
+  border: 1px solid #0000001A;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.moreEmojisDropdown {
+  position: fixed;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  background-color: #fff;
+  border: 1px solid #0000001A;
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10000;
+  min-width: 120px;
+  max-width: 400px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.metricBtn:hover,
+.addBtn:hover {
+  background-color: #e0e0e0;
+}
+
+.metricBtn .icon,
+.addBtn .icon {
+  font-size: 16px;
+}
+
+.titleSection {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainTitle {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.introSection {
+  margin-bottom: 16px;
+}
+
+.introTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.introText {
+  font-family: 'Pretendard';
+  font-weight: 500;
+  font-size: 18px;
+  color: #414141;
+  line-height: 26px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  min-height: 1em;
+}
+
+.contentSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pointsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.pointsLabel {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-size: 16px;
+    color: #666;
+    line-height: 100%;
+}
+
+.pointsBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background-color: #FFFFFF;
+  color: #414141;
+  border: 1px solid #0000001A;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.leafIcon {
+  font-size: 16px;
+}
+
+.pointsText {
+  font-family: 'Pretendard';
+  font-weight: 500;
+  font-size: 16px;
+  color: #414141;
+}
+
+.icon {
+  font-size: 16px;
+}
+
+.completed,
+.incomplete {
+  /* Sticker state classes - styling handled by Sticker component */
+  display: block;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+.actionButtons a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.actionButtons a:visited,
+.actionButtons a:active,
+.actionButtons a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.divider {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.navButtons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px ;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  padding: 6px 16px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  height: auto;
+}
+
+.navBtnText {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+}
+
+.actionLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navBtn:hover {
+  background-color: #e0e0e0;
+}
+
+.mainContent {
+  
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: visible;
+}
+
+.habitTrackerCard {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+  border: 1px solid #0000001A;
+}
+
+
+.cardTitle {
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.todayHabitCardTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  min-width: 280px;
+  position: relative;
+  margin: 0 auto 15px;
+}
+
+.habitGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gridHeader {
+  display: grid;
+  grid-template-columns: 200px repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.habitHeaderCell {
+  font-weight: 600;
+  color: #666;
+  padding: 8px;
+}
+
+.dayHeaderCell {
+  text-align: center;
+  font-weight: 600;
+  color: #666;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.habitRow {
+  display: grid;
+  grid-template-columns: 200px repeat(7, 1fr);
+  gap: 8px;
+  align-items: center;
+}
+
+.habitNameCell {
+    text-align: right;
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-size: 16px;
+    color: #414141;
+    padding: 12px 8px;
+    word-break: keep-all;
+}
+
+.habitCell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  cursor: default;
+  border-radius: 4px;
+}
+
+.habitIcon {
+  width: 36px;
+  height: 36px;
+  display: block;
+  transition: opacity 0.2s;
+}
+
+/* Tablet Screen Responsive (<= 768px) */
+/* Tablet Screen Responsive (<= 768px) */
+/* Tablet Screen Responsive (<= 768px) */
+/* Tablet Screen Responsive (<= 768px) */
+@media (max-width: 768px) {
+
+    .mainContainer {
+        max-width: 100%;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 20px;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .header {
+        padding: 16px;
+        width: 100%;
+        box-sizing: border-box;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .headerTop {
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .contentSection {
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .titleSection {
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+  .gridHeader,
+  .habitRow {
+    grid-template-columns: 120px repeat(7, minmax(0, 1fr));
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .engagementMetrics {
+    color: #ffffff;
+    justify-content: flex-start;
+    align-self: flex-start;
+    flex-wrap: wrap;
+  }
+
+  /* always wrap in mobile screen */
+  .engagementMetrics {
+    flex-wrap: wrap;
+  }
+
+
+
+  /* habit tracker card padding */
+  .mainContent {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 15px;
+    overflow-y: visible;
+    overflow-x: hidden;
+    min-height: auto;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+
+
+  .habitTrackerCard {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .habitNameCell {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    color: #414141;
+    line-height: 100%;
+    font-size: 18px;
+  }
+
+  .mainTitle {
+    font-size: 24px;
+  }
+}
+
+
+/* Mobile Screen Responsive (<= 499px) */
+@media (max-width: 499px) {
+
+    .mainContainer {
+      max-width: 1200px;
+      margin: 0 0 0 0;
+      margin-top: 20px;
+      margin-right: 0px;
+      background-color: #ffffff;
+      width: 100%;
+      box-sizing: border-box;
+      border: 0px solid red;
+      border-radius: 12px;
+      overflow-x: hidden;
+      /* min-height: 100vh; */
+    }
+
+    .headerTop {
+      flex-direction: column;
+      gap: 16px;
+      align-items: stretch;
+      min-height: 0;
+      width: 100%;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    .contentSection {
+      width: 100%;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    .titleSection {
+      width: 100%;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+
+    .engagementMetrics {
+      color: #ffffff;
+      order: 2;
+      justify-content: flex-start;
+      align-self: flex-start;
+      flex-wrap: wrap;
+      flex: 0 0 auto;
+      width: 100%;
+    }
+
+
+    /* Compound selector handled via JSX className combination */
+    
+    .engagementMetrics.wrapEnabled > :global(.EmojiPickerContainer) { /* compound selector handled via JSX className combination */
+      flex-basis: auto;
+      width: auto;
+      margin-top: 0;
+      order: 999;
+    }
+    
+    .engagementMetrics.wrapEnabled > .metricBtn {
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+  
+    .actionButtons {
+      order: 1;
+      justify-content: flex-end;
+      align-self: flex-end;
+      margin-bottom: 0px;
+      padding-top: 0px;
+    }
+
+    .titleSection {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+     .mainContent {
+        border-radius: 10px;
+        /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+        border: 1px solid #0000001A;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 0px;
+        padding-right: 8px;
+        overflow-x: visible;
+        overflow-y: visible;
+        width: calc(100% - 20px);
+        max-width: calc(100% - 20px);
+        min-width: 0;
+        box-sizing: border-box;
+        flex-shrink: 0;
+      }
+
+     .habitTrackerCard {
+       margin: 0 4px;
+       margin-bottom: 0px;
+       overflow-x: auto;        /* scrollable in mobile screen(<= 499px) */
+       min-width: 0;  /* allow flexible width in mobile screen(<= 499px) */
+       width: 100%;
+       max-width: 100%;
+       box-sizing: border-box;
+     }
+
+     .habitGrid {
+       min-width: 0;
+       width: 100%;
+       max-width: 100%;
+     }
+
+     .gridHeader,
+     .habitRow {
+       min-width: 0;
+       width: 100%;
+       max-width: 100%;
+     }
+
+    .gridHeader,
+    .habitRow {
+      grid-template-columns: 100px repeat(7, minmax(0, 1fr));
+      min-width: 500px;  /* ensure grid is wider than container to enable scrolling */
+      width: auto;
+      max-width: none;
+    }
+  
+    .habitNameCell {
+      font-family: 'Pretendard';
+      font-weight: 700;
+      color: #414141;
+      line-height: 100%;
+      font-size: 18px;
+    }
+  
+    .mainTitle {
+      font-size: 24px;
+    }
+
+    /* Habit List Modal - Mobile Responsive */
+    .habitItemWrapper {
+      width: 90%;
+    }
+
+    .habitAddButton {
+      width: 90%;
+    }
+
+    .pointsBtn {
+      display: inline-flex;
+      width: fit-content;
+      max-width: fit-content;
+      flex-shrink: 0;
+      align-self: flex-start;
+    }
+
+  }
+
+/* Habit List Modal Styles */
+.inputHabit {
+  width: 100%;
+}
+
+.habitListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  padding: 4px 0;
+}
+
+.todayHabitListContainer {
+  align-items: center;
+}
+
+
+.habitItemWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.habitListItem {
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Pretendard';
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F5F5F5;
+  border-radius: 20px;
+  padding: 8px 16px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.habitListItem:hover {
+  background-color: #E8E8E8;
+}
+
+.habitName {
+  font-family: 'Pretendard';
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  flex: 1;
+  text-align: center;
+}
+
+.habitNameInput {
+  font-family: 'Pretendard';
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  flex: 1;
+  text-align: center;
+  width: 100%;
+  border: 2px solid #4CAF50;
+  border-radius: 20px;
+  padding: 8px 16px;
+  background-color: #fff;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.todayHabitName:hover {
+  color: #fff;
+}
+
+.todayHabitListItem {
+  max-width: 400px;
+  min-width: 280px;
+  min-height: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todayHabitListItem:hover {
+  background-color: #99C08E;
+  color: #fff;
+}
+
+.todayHabitListItemCompleted {
+  background-color: #99C08E;
+  color: #fff;
+}
+
+.deleteIconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.deleteIcon {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  /* background-color: #FF6B6B; */
+  border-radius: 50%;
+  padding: 4px;
+  transition: transform 0.2s;
+}
+
+.deleteIcon:hover {
+  transform: scale(1.1);
+}
+
+.habitInputForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.habitInputForm {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.habitInputForm input {
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid #E0E0E0;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: #F5F5F5;
+}
+
+.habitListPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.habitAddButton {
+  background-color: #fff;
+  border: 2px solid #E0E0E0;
+  border-radius: 20px;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  z-index: 1;
+  font-size: 24px;
+  color: #666;
+  min-height: 48px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.habitAddButton:hover {
+  background-color: #F9F9F9;
+  border-color: #4A90E2;
+  color: #4A90E2;
+}
+
+.habitInputWrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+
+  

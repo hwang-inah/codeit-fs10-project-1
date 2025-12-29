@@ -1,0 +1,212 @@
+.page {
+  background-color: white;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.title {
+  margin: 0;
+  font-size: 28px;
+}
+
+.navButtons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navBtn {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navBtn:visited,
+.navBtn:active,
+.navBtn:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pointsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.pointsLabel {
+  font-family: 'Pretendard';
+  font-weight: 400;
+  font-size: 18px;
+  color: #818181;
+}
+
+.pointsBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background-color: #FFFFFF;
+  color: #414141;
+  border: 1px solid #0000001A;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.leafIcon {
+  font-size: 16px;
+}
+
+.pointsText {
+  font-family: 'Pretendard';
+  font-weight: 500;
+  font-size: 16px;
+  color: #414141;
+}
+
+.timerSection {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timerTitle {
+  margin-bottom: 24px;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #414141;
+}
+
+.concentrationTimeDisplay {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.timerDisplay {
+  font-size: 120px;
+  margin: 24px 0 40px 0;
+  color: #414141;
+  font-weight: 800;
+  font-family: 'Pretendard', sans-serif;
+  line-height: 1.2;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.startButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 32px;
+  background-color: #95BE2B;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Pretendard', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.startButton:hover {
+  background-color: #7FA024;
+}
+
+.startIcon {
+  font-size: 16px;
+}
+
+.pauseButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 32px;
+  background-color: #578246;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Pretendard', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pauseButton:hover {
+  background-color: #456835;
+}
+
+.pauseIcon {
+  font-size: 16px;
+}
+
+.resetButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 32px;
+  background-color: #818181;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Pretendard', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.resetButton:hover {
+  background-color: #666666;
+}
+
+.resetIcon {
+  font-size: 16px;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+}
+
+@media (max-width: 499px) {
+  .startButton {
+    padding: 12px 14px;
+    font-size: 16px;
+  }
+
+  .pauseButton {
+    padding: 12px 14px;
+    font-size: 16px;
+  }
+
+  .resetButton {
+    padding: 12px 14px;
+    font-size: 16px;
+  }
+}

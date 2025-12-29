@@ -1,0 +1,243 @@
+.page
+{
+	width: 100%;
+	margin: 0px auto;
+	margin-top: 40px;
+	padding: 40px 40px;
+	border-radius: 20px;
+	background-color: #FFF;
+}
+
+/* upper section */
+
+.head
+{
+	display: flex;
+	justify-content: space-between;
+
+	color: #414141;
+	font-size: 32px;
+	font-weight: 800;
+}
+
+.titleArea {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #414141;
+}
+
+.goto
+{
+	gap: 16px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+
+	color: #818181;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.link
+{
+	padding: 12px 24px;
+
+	border-width: 1px;
+	border-style: solid;
+	border-color: #DDD;
+	border-radius: 15px;
+
+	color: #818181;
+	font-size: 16px;
+	font-weight: 500;
+
+	text-decoration: none;
+}
+
+.info
+{
+	color: #818181;
+	font-size: 18px;
+	font-weight: 400;
+
+	margin-top: 16px;
+}
+
+.pointsBox {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.data
+{
+	gap: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: fit-content;
+	padding: 12px 24px;
+
+	color: #414141;
+	font-size: 16px;
+	font-weight: 500;
+
+	border-width: 1px;
+	border-style: solid;
+	border-color: #DDD;
+	border-radius: 15px;
+
+	margin-top: 8px;
+}
+
+.pointsLabel {
+  font-size: 14px;
+  color: #818181;
+}
+
+/* lower section */
+
+.body
+{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	color: #414141;
+	font-size: 24px;
+	font-weight: 800;
+
+	margin-top: 24px;
+}
+
+.bodyHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.timeEditArea {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timeEditBtn,
+.timeSaveBtn,
+.timeCancelBtn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.timeInput {
+  width: 110px;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  background-color: #fff;
+}
+
+.timeInput:focus {
+  border-color: #99C08E;
+  box-shadow: 0 0 0 2px rgba(153, 192, 142, 0.2);
+}
+
+.timeInput:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.clock
+{
+	color: #414141;
+	font-size: 120px;
+	font-weight: 800;
+
+	margin-top: 60px;
+}
+
+.tools
+{
+	gap: 24px;
+	display: flex;
+
+	margin-top: 60px;
+}
+
+.pause_btn
+{
+	width: 64px;
+	height: 64px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border: none;
+	border-radius: 50%;
+	background-color: #99C08E;
+}
+
+.start_btn
+{
+	gap: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	color: #FFFFFF;
+	font-size: 28px;
+	font-weight: 800;
+	line-height: 100%;
+
+	border: none;
+	padding: 8px 78px;
+	padding-right: 105px;
+	border-radius: 50px;
+	background-color: #99C08E;
+}
+
+.reset_btn
+{
+	width: 64px;
+	height: 64px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border: none;
+	border-radius: 50%;
+	background-color: #99C08E;
+}
+
+.pause_btn:hover
+{
+	background-color: #578246;
+}
+
+.start_btn:hover
+{
+	background-color: #578246;
+}
+
+.reset_btn:hover
+{
+	background-color: #578246;
+}

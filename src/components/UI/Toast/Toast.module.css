@@ -1,0 +1,88 @@
+/* Toast container fixed at the bottom right for visibility */
+.toastContainer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+
+    /* Animation: Slide in from the right */
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+/* Exit animation: Slide out to the right */
+.toastContainer.dismissing {
+    animation: slideOut 0.5s ease-in forwards;
+}
+
+.toastIcon {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.toastIcon img {
+    width: 20px;
+    height: 20px;
+}
+
+.toastMessage {
+    flex-grow: 1;
+    font-weight: 500;
+}
+
+.toastClose {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    margin-left: 15px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.toastClose:hover {
+    opacity: 1;
+}
+
+/* Color variations */
+.toastSuccess {
+    background-color: #4CAF50; /* Green */
+}
+
+.toastError {
+    background-color: #F44336; /* Red */
+}
+
+.toastInfo {
+    background-color: #2196F3; /* Blue */
+}
+
+/* Keyframes for animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}

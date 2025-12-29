@@ -1,0 +1,11 @@
+@import url(https://cdn.jsdelivr.net/npm/reset-css/reset.min.css);
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 20px;
+}

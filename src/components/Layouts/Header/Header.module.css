@@ -1,0 +1,13 @@
+.logoForestContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    top: 10px;
+    left: 50px;
+    padding-bottom: 20px;
+}
+  
+.logoForest { 
+    width: 182px;
+    height: 60px;
+}
